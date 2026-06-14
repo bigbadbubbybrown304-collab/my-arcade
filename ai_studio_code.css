@@ -1,0 +1,49 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+body { background-color: #0f172a; color: white; text-align: center; overflow-x: hidden; }
+
+header { padding: 20px; background: #1e293b; position: sticky; top: 0; z-index: 10; }
+header h1 span { color: #38bdf8; }
+
+#searchBar {
+    margin-top: 15px;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+#gameGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.card:hover { transform: scale(1.05); background: #334155; }
+.card img { width: 100%; height: 100px; object-fit: contain; border-radius: 5px; }
+.card h3 { margin-top: 10px; font-size: 1rem; }
+
+/* Overlay View */
+#gameOverlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: black;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+.hidden { display: none !important; }
+
+.controls { padding: 10px; background: #1e293b; display: flex; gap: 10px; }
+.controls button { padding: 8px 15px; cursor: pointer; border: none; border-radius: 4px; background: #38bdf8; font-weight: bold; }
+
+#gameFrame { flex-grow: 1; width: 100%; height: 100%; }
